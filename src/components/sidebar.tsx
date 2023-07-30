@@ -20,16 +20,17 @@ import {
 import logo from "/logo.png";
 import { Link } from "react-router-dom";
 import { Settings } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 function sidebar() {
+  const navigate = useNavigate();
+
   return (
     <div>
       <Card className="w-64 md:w-72 h-screen ">
         <CardHeader>
           <CardTitle>
-            <Link to="/">
-            <img src={logo} alt="Logo" className="cursor-pointer" />
-            </Link>
+            <img src={logo} alt="Logo" className="cursor-pointer"  onClick={() => navigate('/landing')}/>
           </CardTitle>
           {/* <CardDescription>Card Description</CardDescription> */}
         </CardHeader>
@@ -47,12 +48,12 @@ function sidebar() {
             <CommandList>
               <CommandEmpty>No results found.</CommandEmpty>
               <CommandGroup heading="Chat History">
-                <CommandItem>Chat 1</CommandItem>
-                <CommandItem>Chat 2</CommandItem>
-                <CommandItem>Chat 3</CommandItem>
-                <CommandItem>Chat 3</CommandItem>
-                <CommandItem>Chat 3</CommandItem>
-                <CommandItem>Chat 3</CommandItem>
+                <CommandItem>Chat 1 ....</CommandItem>
+                <CommandItem>Chat 2 ....</CommandItem>
+                <CommandItem>Chat 3 ....</CommandItem>
+                <CommandItem>Chat 4 ....</CommandItem>
+                <CommandItem>Chat 5 ....</CommandItem>
+                <CommandItem>Chat 6 ....</CommandItem>
               </CommandGroup>
               <CommandSeparator />
               {/* <CommandGroup heading="Settings">
@@ -65,7 +66,7 @@ function sidebar() {
         </CardContent>
 
         <CardFooter className="absolute cursor-pointer bottom-0 space-x-2 bg-slate-200 rounded-lg w-64 p-2 m-4">
-          <Settings /> 
+          <Settings />
           <p>Settings</p>
         </CardFooter>
       </Card>
