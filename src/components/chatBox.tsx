@@ -115,7 +115,7 @@ function ChatBox() {
       </div>
 
       {/* Input */}
-      <div className="px-2 lg:px-10  absolute bottom-0 w-full md:lg:w-[80vw] flex items-center justify-center bg-red-400">
+      <div className="px-2 lg:px-10 py-6 absolute bottom-0 w-full md:lg:w-[80vw] flex items-center justify-center bg-white">
         <div className="px-2 lg:px-10   lg:w-full flex items-center justify-center">
           {/* <h1>Thissisisisi</h1> */}
           <div className="w-full">
