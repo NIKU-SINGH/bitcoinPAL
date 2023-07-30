@@ -19,8 +19,12 @@ import {
 import logo from "/logo.png";
 import { Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from 'react-router-dom';
+
 
 function sidebar() {
+  const navigate = useNavigate();
+
   const redirect = () => {
     window.location.href = "https://github.com/ecurrencyhodler/Bitcoin-PAL";
   };
