@@ -6,7 +6,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-
 import {
   Command,
   CommandEmpty,
@@ -19,17 +18,23 @@ import {
 
 import logo from "/logo.png";
 import { Settings } from "lucide-react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 function sidebar() {
   const navigate = useNavigate();
 
   return (
     <div>
-      <Card className="w-64 md:w-72 h-screen ">
+      <Card className="w-64 md:w-72  h-full ">
         <CardHeader>
           <CardTitle>
-            <img src={logo} alt="Logo" className="cursor-pointer"  onClick={() => navigate('/landing')}/>
+            <img
+              src={logo}
+              alt="Logo"
+              className="cursor-pointer"
+              onClick={() => navigate("/landing")}
+            />
           </CardTitle>
           {/* <CardDescription>Card Description</CardDescription> */}
         </CardHeader>
@@ -64,9 +69,24 @@ function sidebar() {
           </Command>
         </CardContent>
 
-        <CardFooter className="absolute cursor-pointer bottom-0 space-x-2 bg-slate-200 rounded-lg w-64 p-2 m-4">
-          <Settings />
-          <p>Settings</p>
+        <CardFooter className=" cursor-pointer  space-x-2 absolute bottom-0 justify-center rounded-lg w-48 md:w-64 p-2 m-4">
+          <div className="flex-col space-y-2 items-center">
+            <Button
+              onClick={() => navigate("/")}
+              variant="outline"
+              className="p-6 w-64 bg-black text-white"
+            >
+              Tain and Earn
+            </Button>
+            <Button
+              onClick={() => navigate("/")}
+              variant="outline"
+              className="p-6 w-64"
+            >
+              <Settings />
+              <p className="ml-4">Settings</p>{" "}
+            </Button>
+          </div>
         </CardFooter>
       </Card>
     </div>
