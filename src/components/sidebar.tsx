@@ -18,11 +18,12 @@ import {
 
 import logo from "/logo.png";
 import { Settings } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 function sidebar() {
-  const navigate = useNavigate();
+  const redirect = () => {
+    window.location.href = "https://github.com/ecurrencyhodler/Bitcoin-PAL";
+  };
 
   return (
     <div>
@@ -72,16 +73,16 @@ function sidebar() {
         <CardFooter className=" cursor-pointer  space-x-2 absolute bottom-0 justify-center rounded-lg w-48 md:w-64 p-2 m-4">
           <div className="flex-col space-y-2 items-center">
             <Button
-              onClick={() => navigate("/")}
+              onClick={redirect}
               variant="outline"
-              className="p-6 w-64 bg-black text-white"
+              className="p-4 w-64 bg-black text-white"
             >
               Tain and Earn
             </Button>
             <Button
               onClick={() => navigate("/")}
               variant="outline"
-              className="p-6 w-64"
+              className="p-4 w-64"
             >
               <Settings />
               <p className="ml-4">Settings</p>{" "}
