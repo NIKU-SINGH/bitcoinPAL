@@ -1,11 +1,13 @@
 // import { siteConfig } from "@/config/site"
 
-
-
 import logo from "/logo.png";
 import MainNav from "../components/mainNav";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export default function Landing() {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col w-full">
       <div className="flex fixed  justify-between items-center w-full px-24 p-4 bg-gray-100 ">
@@ -17,7 +19,7 @@ export default function Landing() {
         </div>
       </div>
 
-      <section className="container mt-10 grid items-center justify-center gap-6 pb-8 pt-6 md:py-10 h-[80vh]">
+      <section className="container mt-24 grid items-center justify-center gap-6 pb-8 pt-6 md:py-10 h-[80vh]">
         <div className="flex max-w-[980px] flex-col items-center gap-2 text-center">
           <h1 className=" font-heading text-3xl font-semibold leading-tight tracking-tighter md:text-7xl">
             An example app built using <br className="hidden sm:inline" />
@@ -27,6 +29,22 @@ export default function Landing() {
             I&apos;m building a web app with Next.js 13 and open sourcing
             everything. Follow along as we figure this out together.
           </p>
+        </div>
+        <div className="w-full flex items-center justify-center">
+          <Button
+            onClick={() => navigate("/")}
+            variant="outline"
+            className="p-6 w-64 bg-black text-white"
+          >
+            Ask Question
+          </Button>
+          <Button
+            onClick={() => navigate("/")}
+            variant="outline"
+            className="p-6 w-64 hover:bg-black hover:text-white"
+          >
+            Tain and Earn
+          </Button>
         </div>
         <div className="jus flex items-center justify-center gap-4">
           <div className="">
@@ -44,7 +62,7 @@ export default function Landing() {
 
       <section
         id="features"
-        className="container space-y-6 bg-slate-100  py-8 dark:bg-transparent md:py-12 lg:py-24 -z-10"
+        className="container space-y-6 bg-slate-100  mt-10 py-8 dark:bg-transparent md:py-12 lg:py-24 -z-10"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <h2 className="font-heading text-3xl font-semibold leading-[1.1] sm:text-3xl md:text-6xl">
