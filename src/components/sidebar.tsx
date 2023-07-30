@@ -1,21 +1,11 @@
-import React from "react";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 import {
   Command,
@@ -29,7 +19,6 @@ import {
 
 import logo from "/logo.png";
 import { Link } from "react-router-dom";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Settings } from "lucide-react";
 
 function sidebar() {
@@ -38,9 +27,9 @@ function sidebar() {
       <Card className="w-64 md:w-72 h-screen ">
         <CardHeader>
           <CardTitle>
-            {/* <Link to="/">
-            </Link> */}
+            <Link to="/">
             <img src={logo} alt="Logo" className="cursor-pointer" />
+            </Link>
           </CardTitle>
           {/* <CardDescription>Card Description</CardDescription> */}
         </CardHeader>
