@@ -63,7 +63,7 @@ function ChatBox() {
     <div className="w-full flex flex-col max-h-screen overflow-hidden">
       <Navbar />
 
-      <div className="flex px-16 h-[95vh]">
+      <div className="flex px-4 md:px-16 h-[95vh]">
         {/* Chat */}
         <div className="w-full">
           <ScrollArea className="h-[600px] rounded-md  p-4 ">
