@@ -18,7 +18,6 @@ import {
 } from "@/components/ui/command";
 
 import logo from "/logo.png";
-import { Link } from "react-router-dom";
 import { Settings } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 
