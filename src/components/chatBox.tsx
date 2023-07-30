@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Send } from "lucide-react";
 import axios from "axios";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import logo1 from "/logo1.png";
 import { Skeleton } from "@/components/ui/skeleton";
